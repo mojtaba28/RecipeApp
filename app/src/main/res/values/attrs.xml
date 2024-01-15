@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="recipeAppTextColor" format="color"> </attr>
+    <attr name="recipeLikeColor" format="color"> </attr>
+    <attr name="recipeTimeColor" format="color"> </attr>
+    <attr name="recipeVeganColor" format="color"> </attr>
+    <attr name="recipeHealthColor" format="color"> </attr>
+</resources>

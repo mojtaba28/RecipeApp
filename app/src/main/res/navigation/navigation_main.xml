@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/splashFragment">
+
+    <action
+        android:id="@+id/actionToRegister"
+        app:destination="@id/registerFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.recipeapp.view.fragment.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.recipeapp.view.fragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+
+    </fragment>
+
+    <action
+        android:id="@+id/actionToRecipe"
+        app:destination="@id/recipeFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.example.recipeapp.view.fragment.RecipeFragment"
+        android:label="fragment_recipe"
+        tools:layout="@layout/fragment_recipe" >
+        <argument
+            android:name="isUpdateData"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/luckyFragment"
+        android:name="com.example.recipeapp.view.fragment.LuckyFragment"
+        android:label="fragment_lucky"
+        tools:layout="@layout/fragment_lucky" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.recipeapp.view.fragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.example.recipeapp.view.fragment.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
+
+    <action
+        android:id="@+id/actionToMenu"
+        app:destination="@id/menuFragment" />
+
+    <dialog
+        android:id="@+id/menuFragment"
+        android:name="com.example.recipeapp.view.fragment.MenuFragment"
+        android:label="MenuFragment"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/actionMenuToRecipe"
+            app:destination="@id/recipeFragment"
+            app:popUpTo="@id/recipeFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+</navigation>

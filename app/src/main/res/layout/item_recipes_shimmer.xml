@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_15mdp"
+    android:layout_marginVertical="@dimen/_5mdp"
+    android:background="@drawable/bg_rounded"
+    android:elevation="@dimen/_2mdp">
+    <!--Card-->
+    <View
+        android:id="@+id/recipeImageView"
+        android:layout_width="@dimen/_100mdp"
+        android:layout_height="@dimen/_100mdp"
+        android:layout_margin="@dimen/_8mdp"
+        android:background="@color/mediumGray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--Name-->
+    <View
+        android:id="@+id/recipeNameView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_30mdp"
+        android:layout_marginHorizontal="@dimen/_8mdp"
+        android:background="@color/mediumGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/recipeImageView"
+        app:layout_constraintTop_toTopOf="@id/recipeImageView" />
+    <!--Desc-->
+    <View
+        android:id="@+id/recipeDescView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/_5mdp"
+        android:background="@color/mediumGray"
+        app:layout_constraintBottom_toTopOf="@id/recipeInfoLay"
+        app:layout_constraintEnd_toEndOf="@id/recipeNameView"
+        app:layout_constraintStart_toStartOf="@+id/recipeNameView"
+        app:layout_constraintTop_toBottomOf="@id/recipeNameView" />
+    <!--Info-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recipeInfoLay"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35mdp"
+        app:layout_constraintBottom_toBottomOf="@id/recipeImageView"
+        app:layout_constraintEnd_toEndOf="@id/recipeNameView"
+        app:layout_constraintStart_toStartOf="@+id/recipeNameView">
+        <!--Like-->
+        <View
+            android:id="@+id/recipeLikeView"
+            android:layout_width="@dimen/_30mdp"
+            android:layout_height="@dimen/_30mdp"
+            android:background="@color/mediumGray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/recipeTimeView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--Time-->
+        <View
+            android:id="@+id/recipeTimeView"
+            android:layout_width="@dimen/_30mdp"
+            android:layout_height="@dimen/_30mdp"
+            android:background="@color/mediumGray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/recipeVeganView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/recipeLikeView"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--Vegan-->
+        <View
+            android:id="@+id/recipeVeganView"
+            android:layout_width="@dimen/_30mdp"
+            android:layout_height="@dimen/_30mdp"
+            android:background="@color/mediumGray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/recipeHealthView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/recipeTimeView"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--health-->
+        <View
+            android:id="@+id/recipeHealthView"
+            android:layout_width="@dimen/_30mdp"
+            android:layout_height="@dimen/_30mdp"
+            android:background="@color/mediumGray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/recipeVeganView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
